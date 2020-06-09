@@ -1,0 +1,22 @@
+extends ../layouts/layout
+
+block append vars
+  - var key = "index"
+  - var page = settings[key]
+
+block contents
+  main
+    h1 げーむ
+
+    .enemy
+      p.enemyname#enemyname
+      p.enemyhp#enemyHp
+    .player
+      button#attack 攻撃
+      button.Technique#Technique 必殺の一撃
+      button#escape 逃げる
+    .log
+      p Message
+      .messagelog#messagelog
+
+    button#Creation 敵の創造を行う
